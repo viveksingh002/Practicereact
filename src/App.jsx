@@ -5,6 +5,7 @@ import Solvestate from './Solvestate'
 import Onlick from './onclickevent'
 import Test from './Test'
 import Props from './Props'
+import Counter from './Counter'
 
 
 function App() {
@@ -45,7 +46,7 @@ title="5412"
 
 
 
-
+<Counter/>
 
 
     </div>
