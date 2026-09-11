@@ -5,11 +5,12 @@ const[value,setValue]=useState("");
 //     value(setValue(e.target.value))
 // }
 function hide(){
-    setValue(" ")
+    setValue("")
 }
 return(
     <div>
     <h1>{value}</h1>
+    <h2>Character:{value.length}</h2>
         <input value={value} onChange={(e)=>{setValue(e.target.value)}}/>
         <button onClick={hide}>Clear</button>
     </div>
