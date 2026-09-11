@@ -6,6 +6,7 @@ import Onlick from './onclickevent'
 import Test from './Test'
 import Props from './Props'
 import Counter from './Counter'
+import Input from './Inputname'
 
 
 function App() {
@@ -47,7 +48,7 @@ title="5412"
 
 
 <Counter/>
-
+<Input/>
 
     </div>
   )
