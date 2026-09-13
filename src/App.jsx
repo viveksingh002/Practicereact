@@ -8,6 +8,7 @@ import Props from './Props'
 import Counter from './Counter'
 import Input from './Inputname'
 import Text from './ShowHide'
+import Loginform from './Loginpage'
 
 
 function App() {
@@ -51,7 +52,7 @@ title="5412"
 <Counter/>
 <Input/>
 <Text/>
-
+<Loginform/>
     </div>
   )
 }
