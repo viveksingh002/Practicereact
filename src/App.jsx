@@ -7,6 +7,7 @@ import Test from './Test'
 import Props from './Props'
 import Counter from './Counter'
 import Input from './Inputname'
+import Text from './ShowHide'
 
 
 function App() {
@@ -49,6 +50,7 @@ title="5412"
 
 <Counter/>
 <Input/>
+<Text/>
 
     </div>
   )
