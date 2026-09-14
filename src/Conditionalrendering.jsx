@@ -1,22 +1,45 @@
-import { useState } from "react";
+// import { useState } from "react";
  function Conditionalrendering() {
-const[value,setValue]=useState(false);
+
+
+const isAdmin = true;
+
 
 return(
-    <div>
-        {
-            value ? <h1>login</h1> : <h1>Please login</h1>
-        }
-        {
-        value ? <button onClick={()=>setValue(false)}>Logout</button> : <button onClick={()=>setValue(true)}>Login</button>
-        }
-    </div>
+<div>
+
+{
+isAdmin && <h1>Admin Panel</h1>
+}
+
+</div>
 )
 
 
- }
 
-export default Conditionalrendering;
+ }
+ export default Conditionalrendering
+
+// tenrnary operator
+// import { useState } from "react";
+//  function Conditionalrendering() {
+// const[value,setValue]=useState(false);
+
+// return(
+//     <div>
+//         {
+//             value ? <h1>login</h1> : <h1>Please login</h1>
+//         }
+//         {
+//         value ? <button onClick={()=>setValue(false)}>Logout</button> : <button onClick={()=>setValue(true)}>Login</button>
+//         }
+//     </div>
+// )
+
+
+//  }
+
+// export default Conditionalrendering;
 
 
 
