@@ -9,6 +9,7 @@ import Counter from './Counter'
 import Input from './Inputname'
 import Text from './ShowHide'
 import Loginform from './Loginpage'
+import Conditionalrendering from './Conditionalrendering'
 
 
 function App() {
@@ -53,6 +54,7 @@ title="5412"
 <Input/>
 <Text/>
 <Loginform/>
+<Conditionalrendering/>
     </div>
   )
 }
