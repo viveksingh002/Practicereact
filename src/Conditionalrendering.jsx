@@ -1,24 +1,26 @@
-// import { useState } from "react";
- function Conditionalrendering() {
+import { useState } from "react";
+
+//Logical AND &&
+//  function Conditionalrendering() {
 
 
-const isAdmin = true;
+// const isAdmin = true;
 
 
-return(
-<div>
+// return(
+// <div>
 
-{
-isAdmin && <h1>Admin Panel</h1>
-}
+// {
+// isAdmin && <h1>Admin Panel</h1>
+// }
 
-</div>
-)
+// </div>
+// )
 
 
 
- }
- export default Conditionalrendering
+//  }
+//  export default Conditionalrendering
 
 // tenrnary operator
 // import { useState } from "react";
@@ -51,34 +53,28 @@ isAdmin && <h1>Admin Panel</h1>
 
 
 // If- else condition
-// function Conditionalrendering() {
+function Conditionalrendering() {
 
-//   const [value, setValue] = useState(false);
+  const [value, setValue] = useState(false);
 
-//   function log() {
-//     return (
-//       <div>
-//         <button onClick={() => setValue(true)}>Log in</button>
-//       </div>
-//     );
-//   }
 
-//   if (value) {
-//     return (
-//       <div>
-//         <h1>Dashboard</h1>
-//         <button onClick={() => setValue(false)}>Logout</button>
-//       </div>
-//     );
-//   } else {
-//     return (
-//       <div>
-//         <h1>Please login</h1>
-//         {log()}
-//       </div>
-//     );
-//   }
 
-// }
+  if (value==true) {
+    return (
+      <div>
+        <h1>Dashboard</h1>
+        <button onClick={() => setValue(false)}>Logout</button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h1>Please login</h1>
+        <button onClick={() => setValue(true)}>Log in</button>
+      </div>
+    );
+  }
 
-// export default Conditionalrendering;
+}
+
+export default Conditionalrendering;
