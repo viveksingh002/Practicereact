@@ -10,6 +10,7 @@ import Input from './Inputname'
 import Text from './ShowHide'
 import Loginform from './Loginpage'
 import Conditionalrendering from './Conditionalrendering'
+import Ternaryoperator from './Ternaryoperator'
 
 
 function App() {
@@ -55,6 +56,7 @@ title="5412"
 <Text/>
 <Loginform/>
 <Conditionalrendering/>
+<Ternaryoperator/>
     </div>
   )
 }
