@@ -52,29 +52,54 @@ import { useState } from "react";
 
 
 
-// If- else condition
-function Conditionalrendering() {
+// // If- else condition
+// function Conditionalrendering() {
 
-  const [value, setValue] = useState(false);
+//   const [value, setValue] = useState(false);
 
 
 
-  if (value==true) {
-    return (
-      <div>
-        <h1>Dashboard</h1>
-        <button onClick={() => setValue(false)}>Logout</button>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <h1>Please login</h1>
-        <button onClick={() => setValue(true)}>Log in</button>
-      </div>
-    );
-  }
+//   if (value==true) {
+//     return (
+//       <div>
+//         <h1>Dashboard</h1>
+//         <button onClick={() => setValue(false)}>Logout</button>
+//       </div>
+//     );
+//   } else {
+//     return (
+//       <div>
+//         <h1>Please login</h1>
+//         <button onClick={() => setValue(true)}>Log in</button>
+//       </div>
+//     );
+//   }
 
+// }
+
+// export default Conditionalrendering;
+
+function Conditionalrendering(){
+    const password = "hiiii";
+    const[value,setvalue]=useState(password)
+const[showpass, setshowpass]=useState(true)
+if (showpass==false) {
+    return(
+    <div>
+    <h1>{value}</h1>
+        <button onClick={()=>{
+        setshowpass(true) ; 
+        setvalue(password)
+        }}>Showpassword</button>
+    </div>)
+}else{
+    return(
+    <div>
+    <h1>{value}</h1>
+        <button onClick={()=>{setshowpass(false);
+         setvalue("");
+         }}>Hidepassword</button>
+    </div>)
 }
-
+}
 export default Conditionalrendering;
