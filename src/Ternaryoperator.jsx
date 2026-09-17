@@ -17,20 +17,38 @@
 // }
 // export default Ternaryoperator;
 
+// import { useState } from "react";
+// function Ternaryoperator(){
+//     const password=12345;
+//     const[value,setvalue]=useState(true)
+// return(
+//     <div>
+//         <button onClick={()=>setvalue(!value)}>
+//             {
+//                 value?"hide pass":"show pass"
+//             }
+//         </button>
+//         {
+//             value?<h1>{password}</h1>:<h1></h1>
+//         }
+//     </div>
+// )
+// }
+// export default Ternaryoperator;
+
 import { useState } from "react";
 function Ternaryoperator(){
-    const password=12345;
-    const[value,setvalue]=useState(true)
+    const[value,setvalue]=useState("")
 return(
     <div>
-        <button onClick={()=>setvalue(!value)}>
-            {
-                value?"hide pass":"show pass"
-            }
-        </button>
-        {
-            value?<h1>{password}</h1>:<h1></h1>
-        }
+    <h1>{value}</h1>
+        <input 
+        placeholder="Enter your age"
+        type="Number"
+        onChange={(e)=>setvalue(e.target.value)}/>
+       <h1> {
+            value===""?"Enter your age":value<18?"you cant vote":"you can vote"
+        }</h1>
     </div>
 )
 }
