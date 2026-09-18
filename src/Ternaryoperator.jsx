@@ -36,20 +36,45 @@
 // }
 // export default Ternaryoperator;
 
+// import { useState } from "react";
+// function Ternaryoperator(){
+//     const[value,setvalue]=useState("")
+// return(
+//     <div>
+//     <h1>{value}</h1>
+//         <input 
+//         placeholder="Enter your age"
+//         type="Number"
+//         onChange={(e)=>setvalue(e.target.value)}/>
+//        <h1> {
+//             value===""?"Enter your age":value<18?"you cant vote":"you can vote"
+//         }</h1>
+//     </div>
+// )
+// }
+// export default Ternaryoperator;
+
+//loading fetch
 import { useState } from "react";
-function Ternaryoperator(){
-    const[value,setvalue]=useState("")
-return(
+
+function Ternaryoperator() {
+  const [value, setValue] = useState(false);
+
+  const fetchData = () => {
+    setTimeout(() => {
+      setValue(true);
+    }, 2000);
+  };
+
+  return (
     <div>
-    <h1>{value}</h1>
-        <input 
-        placeholder="Enter your age"
-        type="Number"
-        onChange={(e)=>setvalue(e.target.value)}/>
-       <h1> {
-            value===""?"Enter your age":value<18?"you cant vote":"you can vote"
-        }</h1>
+      <h1>
+        {value ? "Data Loaded" : "Loading..."}
+      </h1>
+
+      <button onClick={fetchData}>Fetch data</button>
     </div>
-)
+  );
 }
+
 export default Ternaryoperator;
