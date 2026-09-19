@@ -95,3 +95,30 @@
 
 // }
 // export default Ternaryoperator
+
+//Profile Card (Medium)
+
+import { useState } from "react";
+
+function Ternaryoperator() {
+  const [showProfile,setShowProfile] = useState(false)
+
+return(
+  <div>
+  {showProfile && (
+        <div>
+          <h2>Name: Vivek</h2>
+          <h2>Course: CSE</h2>
+          <h2>College: ABC</h2>
+        </div>
+      )}
+    <button onClick={()=>setShowProfile(!showProfile)}>
+      {
+        showProfile?"hide profile":"Show profilee"
+      }
+    </button>
+  </div>
+)
+
+}
+export default Ternaryoperator
