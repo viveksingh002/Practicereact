@@ -98,27 +98,52 @@
 
 //Profile Card (Medium)
 
+// import { useState } from "react";
+
+// function Ternaryoperator() {
+//   const [showProfile,setShowProfile] = useState(false)
+
+// return(
+//   <div>
+//   {showProfile && (
+//         <div>
+//           <h2>Name: Vivek</h2>
+//           <h2>Course: CSE</h2>
+//           <h2>College: ABC</h2>
+//         </div>
+//       )}
+//     <button onClick={()=>setShowProfile(!showProfile)}>
+//       {
+//         showProfile?"hide profile":"Show profilee"
+//       }
+//     </button>
+//   </div>
+// )
+
+// }
+// export default Ternaryoperator
+
+
+
+
+
+
 import { useState } from "react";
 
 function Ternaryoperator() {
-  const [showProfile,setShowProfile] = useState(false)
-
+  const [role,setRole] = useState("user")
 return(
   <div>
-  {showProfile && (
-        <div>
-          <h2>Name: Vivek</h2>
-          <h2>Course: CSE</h2>
-          <h2>College: ABC</h2>
-        </div>
-      )}
-    <button onClick={()=>setShowProfile(!showProfile)}>
-      {
-        showProfile?"hide profile":"Show profilee"
-      }
-    </button>
+ 
+    {
+      role=="admin"?<h1>Admin Dashboard</h1>:role=="user"?<h1>User Dashboard</h1>:role=="guest"?<h1>Please Login</h1>:null
+    }
+  
+    <button onClick={() => setRole("admin")}>Admin</button>
+<button onClick={() => setRole("user")}>User</button>
+<button onClick={() => setRole("guest")}>Guest</button>
+
   </div>
 )
-
 }
 export default Ternaryoperator
