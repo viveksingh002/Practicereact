@@ -55,26 +55,43 @@
 // export default Ternaryoperator;
 
 //loading fetch
-import { useState } from "react";
+// import { useState } from "react";
 
-function Ternaryoperator() {
-  const [value, setValue] = useState(false);
+// function Ternaryoperator() {
+//   const [value, setValue] = useState(false);
+// const fetchdata = () =>{
+//   setValue(true);
+//   setTimeout(() => {
+//   setValue(false)
+// }, 2000);
+// };
 
-  const fetchData = () => {
-    setTimeout(() => {
-      setValue(true);
-    }, 2000);
-  };
+// return(
+//   <div>
+// {
+//   value?<h1>data loading.....</h1>:<h1>Data loaded</h1>
+// }
+//     <button onClick={fetchdata}>Fetch Data</button>
+//   </div>
+// )
+// }
+// export default Ternaryoperator
 
-  return (
-    <div>
-      <h1>
-        {value ? "Data Loaded" : "Loading..."}
-      </h1>
 
-      <button onClick={fetchData}>Fetch data</button>
-    </div>
-  );
-}
+//notificaton system
+// import { useState } from "react";
 
-export default Ternaryoperator;
+// function Ternaryoperator() {
+//   const [value, setValue] = useState(false);
+
+// return(
+//   <div>
+//     <h1>{
+//       value?"You have 5 new messages": "No message here" 
+//     }</h1>
+//     <button onClick={()=> {setValue(!value);}}> Check Messages</button>
+//   </div>
+// )
+
+// }
+// export default Ternaryoperator
