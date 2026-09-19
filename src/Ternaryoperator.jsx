@@ -127,23 +127,23 @@
 
 
 
+// //Multiple Conditions
+// import { useState } from "react";
 
-import { useState } from "react";
-
-function Ternaryoperator() {
-  const [role,setRole] = useState("user")
-return(
-  <div>
+// function Ternaryoperator() {
+//   const [role,setRole] = useState("user")
+// return(
+//   <div>
  
-    {
-      role=="admin"?<h1>Admin Dashboard</h1>:role=="user"?<h1>User Dashboard</h1>:role=="guest"?<h1>Please Login</h1>:null
-    }
+//     {
+//       role=="admin"?<h1>Admin Dashboard</h1>:role=="user"?<h1>User Dashboard</h1>:role=="guest"?<h1>Please Login</h1>:null
+//     }
   
-    <button onClick={() => setRole("admin")}>Admin</button>
-<button onClick={() => setRole("user")}>User</button>
-<button onClick={() => setRole("guest")}>Guest</button>
+//     <button onClick={() => setRole("admin")}>Admin</button>
+// <button onClick={() => setRole("user")}>User</button>
+// <button onClick={() => setRole("guest")}>Guest</button>
 
-  </div>
-)
-}
-export default Ternaryoperator
+//   </div>
+// )
+// }
+// export default Ternaryoperator
