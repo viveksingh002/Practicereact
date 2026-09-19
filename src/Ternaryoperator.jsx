@@ -147,3 +147,27 @@
 // )
 // }
 // export default Ternaryoperator
+
+//Mini Challenge
+
+import { useState } from "react";
+
+function Ternaryoperator() {
+  const[product,setProduct]= useState(true)
+  return(
+    <div>
+    {
+      product?(<div>
+        <h1>Product Added</h1>
+      <h2>Cart Items: 1</h2></div>):<h1>Cart is Empty</h1>
+      
+    }
+      <button onClick={()=>{setProduct(!product)}}>
+        {
+          product?"Remove Product":"Add Product"
+        }
+      </button>
+    </div>
+  )
+}
+export default Ternaryoperator
