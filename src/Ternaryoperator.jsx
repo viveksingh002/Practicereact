@@ -170,4 +170,4 @@ function Ternaryoperator() {
     </div>
   )
 }
-export default Ternaryoperator
+export default Ternaryoperator;
