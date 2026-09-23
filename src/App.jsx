@@ -11,6 +11,7 @@ import Text from './ShowHide'
 import Loginform from './Loginpage'
 import Conditionalrendering from './Conditionalrendering'
 import Ternaryoperator from './Ternaryoperator'
+import Array from './components/Array'
 
 
 function App() {
@@ -57,6 +58,7 @@ title="5412"
 <Loginform/>
 <Conditionalrendering/>
 <Ternaryoperator/>
+<Array/>
     </div>
   )
 }
