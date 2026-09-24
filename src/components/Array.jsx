@@ -41,3 +41,36 @@
 // )
 // }
 // export default Array;
+
+
+//Product Card (Array + Props)
+function Array(props){
+const products = [
+ {
+  name:"iPhone",
+  price:70000
+ },
+ {
+  name:"Laptop",
+  price:50000
+ },
+ {
+  name:"Watch",
+  price:5000
+ }
+];
+return(
+    <div>
+        {
+            products.map((productname)=>(
+                <div>
+                <h1>{productname.name}</h1>
+                <h2>Price: {productname.price}</h2>
+                </div>
+            ))
+        }
+    </div>
+)
+}
+export default Array;
+
