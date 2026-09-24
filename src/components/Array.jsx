@@ -27,3 +27,17 @@
 // export default Array;
 
 //Student List (Array + map + Component
+
+// function Array(){
+// const studentlist = ["Vivek", "Rahul", "Aman", "Rohit"];
+// return(
+//     <div>
+//             {
+//                 studentlist.map((student)=>(
+//                     <h1>Student: {student}</h1>
+//                 ))
+//             }
+//     </div>
+// )
+// }
+// export default Array;
