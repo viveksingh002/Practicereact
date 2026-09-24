@@ -43,34 +43,63 @@
 // export default Array;
 
 
-//Product Card (Array + Props)
-function Array(props){
-const products = [
- {
-  name:"iPhone",
-  price:70000
- },
- {
-  name:"Laptop",
-  price:50000
- },
- {
-  name:"Watch",
-  price:5000
- }
+// //Product Card (Array + Props)
+// function Array(props){
+// const products = [
+//  {
+//   name:"iPhone",
+//   price:70000
+//  },
+//  {
+//   name:"Laptop",
+//   price:50000
+//  },
+//  {
+//   name:"Watch",
+//   price:5000
+//  }
+// ];
+// return(
+//     <div>
+//         {
+//             products.map((productname)=>(
+//                 <div>
+//                 <h1>{productname.name}</h1>
+//                 <h2>Price: {productname.price}</h2>
+//                 </div>
+//             ))
+//         }
+//     </div>
+// )
+// }
+// export default Array;
+
+//Show/Hide Student List
+import { useState } from "react";
+import Student from "../Student";
+function Array(){
+const[value,setValue]=useState(false)
+const students = [
+  "Vivek",
+  "Rahul",
+  "Aman"
 ];
 return(
     <div>
+        <button onClick={()=>{setValue(!value)}}>
+            {
+                value?"Hide Students":"Show Students"
+            }
+        </button>
         {
-            products.map((productname)=>(
-                <div>
-                <h1>{productname.name}</h1>
-                <h2>Price: {productname.price}</h2>
-                </div>
+            students.map((student)=>(
+                
+                 value?  <h1>{student}</h1>: " "
+                
+               
             ))
         }
     </div>
 )
 }
 export default Array;
-
