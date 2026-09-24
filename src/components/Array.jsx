@@ -101,25 +101,64 @@
 // }
 // export default Array;
 
-//Q4. Search Name
-import { useState } from "react";
-function Array(){
-    const[search,setSearch]=useState("")
+// //Q4. Search Name
+// import { useState } from "react";
+// function Array(){
+//     const[search,setSearch]=useState("")
     
 
-const names=[
- "Vivek",
- "Rahul",
- "Aman"
+// const names=[
+//  "Vivek",
+//  "Rahul",
+//  "Aman"
+// ];
+// const foundName = names.find((name) => name === search);
+// return(
+//     <div>
+// <h1>Hello {foundName}</h1>
+//         <input onChange={(e)=> setSearch(e.target.value)}
+//         />
+        
+//     </div>
+// )
+// }
+// export default Array;
+
+//Q5. Like System
+import { use, useState } from "react";
+function Array(){
+const[increase,setIncrease]=useState([0,0,0]);
+const posts=[
+ "React Tutorial",
+ "JavaScript",
+ "Node JS"
 ];
-const foundName = names.find((name) => name === search);
 return(
     <div>
-<h1>Hello {foundName}</h1>
-        <input onChange={(e)=> setSearch(e.target.value)}
-        />
-        
+        {
+            posts.map((post,index)=>(
+                <div>
+                <h1>{post}</h1>
+                <h2>Like: {increase[index]}</h2>
+                <button
+  onClick={() =>
+    setIncrease(
+      increase.map((like, i) =>
+        i === index ? like + 1 : like
+      )
+    )
+  }
+>
+  Like
+</button>
+
+                </div>
+                
+            ))
+        }
     </div>
 )
+
+
 }
 export default Array;
