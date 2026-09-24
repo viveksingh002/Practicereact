@@ -124,41 +124,113 @@
 // }
 // export default Array;
 
-//Q5. Like System
-import { use, useState } from "react";
-function Array(){
-const[increase,setIncrease]=useState([0,0,0]);
-const posts=[
- "React Tutorial",
- "JavaScript",
- "Node JS"
-];
-return(
-    <div>
-        {
-            posts.map((post,index)=>(
-                <div>
-                <h1>{post}</h1>
-                <h2>Like: {increase[index]}</h2>
-                <button
-  onClick={() =>
-    setIncrease(
-      increase.map((like, i) =>
-        i === index ? like + 1 : like
-      )
-    )
-  }
->
-  Like
-</button>
+// //Q5. Like System
+// import { use, useState } from "react";
+// function Array(){
+// const[increase,setIncrease]=useState([0,0,0]);
+// const posts=[
+//  "React Tutorial",
+//  "JavaScript",
+//  "Node JS"
+// ];
+// return(
+//     <div>
+//         {
+//             posts.map((post,index)=>(
+//                 <div>
+//                 <h1>{post}</h1>
+//                 <h2>Like: {increase[index]}</h2>
+//                 <button
+//   onClick={() =>
+//     setIncrease(
+//       increase.map((like, i) =>
+//         i === index ? like + 1 : like
+//       )
+//     )
+//   }
+// >
+//   Like
+// </button>
 
-                </div>
+//                 </div>
                 
-            ))
-        }
-    </div>
-)
+//             ))
+//         }
+//     </div>
+// )
 
 
-}
-export default Array;
+// }
+// export default Array;
+
+// //Q6. Login User List
+// import { useState } from "react";
+// function Array(props){
+
+// const users=[
+//  {
+//  name:"Vivek",
+//  login:true
+//  },
+//  {
+//  name:"Rahul",
+//  login:false
+//  }
+// ]
+// return(
+//     <div>
+//         {
+//             users.map((user)=>(
+//                 <div>
+//                 <h1>{user.name}</h1> 
+//                 {
+//                     user.login?"online":"offline"
+//                 }
+//                 </div>
+                
+//             ))
+//         }
+//     </div>
+// )
+
+// }
+// export default Array;
+
+
+// //using props
+// function User(props) {
+//   return (
+//     <div>
+//       <h1>{props.name}</h1>
+//       <p>{props.login ? "Online" : "Offline"}</p>
+//     </div>
+//   );
+// }
+
+// function Array() {
+//   const users = [
+//     {
+//       name: "Vivek",
+//       login: true
+//     },
+//     {
+//       name: "Rahul",
+//       login: false
+//     }
+//   ];
+
+//   return (
+//     <div>
+//       {
+//         users.map((user) => (
+//         <User
+//           name={user.name}
+//           login={user.login}
+//         />
+//       ))
+//       }
+//     </div>
+//   );
+// }
+
+// export default Array;
