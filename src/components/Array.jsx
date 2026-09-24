@@ -74,31 +74,51 @@
 // }
 // export default Array;
 
-//Show/Hide Student List
+// //Show/Hide Student List
+// import { useState } from "react";
+// import Student from "../Student";
+// function Array(){
+// const[value,setValue]=useState(false)
+// const students = [
+//   "Vivek",
+//   "Rahul",
+//   "Aman"
+// ];
+// return(
+//     <div>
+//         <button onClick={()=>{setValue(!value)}}>
+//             {
+//                 value?"Hide Students":"Show Students"
+//             }
+//         </button>
+//         {
+//             students.map((student)=>(          
+//                  value?  <h1>{student}</h1>: " "
+//             ))
+//         }
+//     </div>
+// )
+// }
+// export default Array;
+
+//Q4. Search Name
 import { useState } from "react";
-import Student from "../Student";
 function Array(){
-const[value,setValue]=useState(false)
-const students = [
-  "Vivek",
-  "Rahul",
-  "Aman"
+    const[search,setSearch]=useState("")
+    
+
+const names=[
+ "Vivek",
+ "Rahul",
+ "Aman"
 ];
+const foundName = names.find((name) => name === search);
 return(
     <div>
-        <button onClick={()=>{setValue(!value)}}>
-            {
-                value?"Hide Students":"Show Students"
-            }
-        </button>
-        {
-            students.map((student)=>(
-                
-                 value?  <h1>{student}</h1>: " "
-                
-               
-            ))
-        }
+<h1>Hello {foundName}</h1>
+        <input onChange={(e)=> setSearch(e.target.value)}
+        />
+        
     </div>
 )
 }
