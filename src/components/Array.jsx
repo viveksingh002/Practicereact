@@ -235,45 +235,77 @@
 
 // export default Array;
 
-//Q7. Counter For Each Student
-import { useState } from "react";
-function Count(props){
-return(
-    <div>
-        <h1>{props.student}</h1>
-        <h2>{props.increase[props.index]}</h2>
-    </div>
-)
-}
+// //Q7. Counter For Each Student
+// import { useState } from "react";
+// function Count(props){
+// return(
+//     <div>
+//         <h1>{props.student}</h1>
+//         <h2>{props.increase[props.index]}</h2>
+//     </div>
+// )
+// }
 
-function Array(){
-    const[increase, setIncrease]=useState([0,0,0]);
-const students=[
- "Vivek",
- "Rahul",
- "Aman"
-];
+// function Array(){
+//     const[increase, setIncrease]=useState([0,0,0]);
+// const students=[
+//  "Vivek",
+//  "Rahul",
+//  "Aman"
+// ];
 
-return(
-    <div>
-        {
-            students.map((student,index)=>(
-               <div>
+// return(
+//     <div>
+//         {
+//             students.map((student,index)=>(
+//                <div>
                
-                <Count 
-                    student={student}
-                    increase={increase}
-                    index={index}
-                />
-                <button onClick={()=>setIncrease(increase.map((increaseone , i )=>(
-                    index===i? increaseone+1:increaseone
-                )
-                ))}> +</button>
-                </div>
-            ))
-        }
-    </div>
-)
-}
+//                 <Count 
+//                     student={student}
+//                     increase={increase}
+//                     index={index}
+//                 />
+//                 <button onClick={()=>setIncrease(increase.map((increaseone , i )=>(
+//                     index===i? increaseone+1:increaseone
+//                 )
+//                 ))}> +</button>
+//                 </div>
+//             ))
+//         }
+//     </div>
+// )
+// }
 
-export default Array;
+// export default Array;
+
+//Q9. Cart System
+// import { useState } from "react";
+// function Array(){
+// const [cart, setCart]=useState([])
+//     const products=[
+// "Mobile",
+// "Laptop",
+// "Mouse"
+// ]
+
+// return(
+//     <div>
+//         <h1>cart item:</h1>
+//          {cart.map((item) => (
+//         <p>{item}</p>
+//       ))}
+//          <button onClick={() => setCart([...cart,products[0]])}>
+//         Add Mobile
+//       </button>
+
+//       <button onClick={() => setCart([...cart,products[1]])}>
+//         Add Laptop
+//       </button>
+
+//       <button onClick={() => setCart([...cart,products[2]])}>
+//         Add Mouse
+//       </button>
+//     </div>
+// )
+// }
+// export default Array;
