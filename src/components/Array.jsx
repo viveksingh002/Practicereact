@@ -309,3 +309,45 @@
 // )
 // }
 // export default Array;
+
+//Q10. Mini Dashboard 🔥
+function Dashboard(props){
+    return(
+        <div>
+<h1>{props.student.name}</h1>
+<h1>{props.student.course}</h1>
+<h1>Status: {props.student.active ? "Active" : "Inactive"}</h1>
+        </div>
+    )
+}
+
+function Array(){
+    const students=[
+ {
+ name:"Vivek",
+ course:"CSE",
+ active:true
+ },
+ {
+ name:"Rahul",
+ course:"IT",
+ active:false
+ }
+]
+return(
+    <div>
+   {
+    students.map((student)=>(
+        <div>
+            <Dashboard
+                student={student}
+            />
+        </div>
+    ))
+   }
+   </div>
+)
+}
+
+
+export default Array;
