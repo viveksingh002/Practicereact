@@ -11,7 +11,9 @@ import Text from './ShowHide'
 import Loginform from './Loginpage'
 import Conditionalrendering from './Conditionalrendering'
 import Ternaryoperator from './Ternaryoperator'
-import Array from './components/Array'
+import Array from './components/RenderingLists/Array'
+import Key from './components/RenderingLists/Key'
+import Components from './Forms/Controlledcomponents'
 
 
 function App() {
@@ -59,6 +61,8 @@ title="5412"
 <Conditionalrendering/>
 <Ternaryoperator/>
 <Array/>
+<Key/>
+<Components/>
 
     </div>
   )
