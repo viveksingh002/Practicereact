@@ -59,13 +59,21 @@ import { useState } from "react";
 //  export default components;
 
 
-// Q3. Password Show
-function Components(){
-const[display, setDisplay]=useState("")
-return(
-  <div>
-    
-  </div>
-)
-}
-export default Components;
+// // Q3. Password Show
+// function Components(){
+// const[display, setDisplay]=useState("")
+// const[show,setShow]=useState("")
+// return(
+//   <div>
+//     <input 
+//       value={display}
+//       onChange={(e)=>setDisplay(e.target.value)}
+//     />
+//     <button onClick={()=>setShow(display)}>Show pass</button>
+//     <h1>Password: {show}</h1>
+//   </div>
+// )
+// }
+// export default Components;
+
+
