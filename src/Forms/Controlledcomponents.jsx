@@ -147,24 +147,58 @@ import { useState } from "react";
 
 //Q7. Select Dropdown
 
-function components() {
-  const [course, setCourse] = useState("");
+// function components() {
+//   const [course, setCourse] = useState("");
 
-  return (
-    <div>
-      <select
-        value={course}
-        onChange={(e) => setCourse(e.target.value)}
-      >
-        <option value="">Select Course</option>
-        <option value="CSE">CSE</option>
-        <option value="IT">IT</option>
-        <option value="ECE">ECE</option>
-      </select>
+//   return (
+//     <div>
+//       <select
+//         value={course}
+//         onChange={(e) => setCourse(e.target.value)}
+//       >
+//         <option value="">Select Course</option>
+//         <option value="CSE">CSE</option>
+//         <option value="IT">IT</option>
+//         <option value="ECE">ECE</option>
+//       </select>
 
-      <h1>Selected Course: {course}</h1>
-    </div>
-  );
+//       <h1>Selected Course: {course}</h1>
+//     </div>
+//   );
+// }
+
+// export default components;
+
+//Q8. Radio Button
+function components(){
+const[gender, setGender]=useState("")
+
+return(
+  <div>
+    
+  <label>
+        <input 
+          type="radio" 
+          checked={gender==="male"}
+              value="male"
+          onChange={(e)=>setGender(e.target.value)} /> male
+    </label>
+  <label>
+        <input 
+          type="radio" 
+          value="female"
+         checked={gender==="female"}
+          onChange={(e)=>setGender(e.target.value)} /> female
+    </label>
+  <label>
+        <input 
+          type="radio" 
+          value="other"
+          checked={gender==="other"}
+          onChange={(e)=>setGender(e.target.value)} /> other
+    </label>
+    <h1>gender: {gender}</h1>
+  </div>
+)
 }
-
 export default components;
