@@ -77,3 +77,19 @@ import { useState } from "react";
 // export default Components;
 
 
+//Q4. Clear Input Button
+
+ function components(){
+const[name, setName] = useState("")
+return(
+  <div>
+    <input
+    value={name}
+     onChange={(e)=>setName(e.target.value)}/>
+     <button onClick={()=>setName("")}>Clear</button>
+    <h1>Hello {name}</h1>
+  </div>
+)
+   
+ }
+ export default components;
