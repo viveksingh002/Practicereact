@@ -114,32 +114,32 @@ import { useState } from "react";
 
 //Q6. Multiple Inputs
 
-//  function components(){
-// const[user, setUser] = useState({
-//  name:"",
-//  email:"",
-//  age:""
-// });
-// return(
-//   <div>
-//     <input
-//     value={user.name}
-//     type="text"
-//      onChange={(e)=>setUser({...user , name:e.target.value})}/>
-//     <input
-//     value={user.email}
-//     type="email"
-//      onChange={(e)=>setUser({...user ,email:e.target.value})}/>
-//     <input
-//     value={user.age}
-//     type="number"
-//      onChange={(e)=>setUser({...user ,age:e.target.value})}/>
+ function components(){
+const[user, setUser] = useState({
+ name:"",
+ email:"",
+ age:""
+});
+return(
+  <div>
+    <input
+    value={user.name}
+    type="text"
+     onChange={(e)=>setUser({...user , name:e.target.value})}/>
+    <input
+    value={user.email}
+    type="email"
+     onChange={(e)=>setUser({...user ,email:e.target.value})}/>
+    <input
+    value={user.age}
+    type="number"
+     onChange={(e)=>setUser({...user ,age:e.target.value})}/>
      
-//     <h1>Name: {user.name}</h1>
-//     <h1>Email: {user.email}</h1>
-//     <h1>Age: {user.age}</h1>
-//   </div>
-// )
+    <h1>Name: {user.name}</h1>
+    <h1>Email: {user.email}</h1>
+    <h1>Age: {user.age}</h1>
+  </div>
+)
    
-//  }
-//  export default components;
+ }
+ export default components;
