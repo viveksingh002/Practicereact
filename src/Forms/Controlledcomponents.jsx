@@ -170,34 +170,57 @@ import { useState } from "react";
 // export default components;
 
 //Q8. Radio Button
+// function components(){
+// const[gender, setGender]=useState("")
+
+// return(
+//   <div>
+    
+//   <label>
+//         <input 
+//           type="radio" 
+//           checked={gender==="male"}
+//               value="male"
+//           onChange={(e)=>setGender(e.target.value)} /> male
+//     </label>
+//   <label>
+//         <input 
+//           type="radio" 
+//           value="female"
+//          checked={gender==="female"}
+//           onChange={(e)=>setGender(e.target.value)} /> female
+//     </label>
+//   <label>
+//         <input 
+//           type="radio" 
+//           value="other"
+//           checked={gender==="other"}
+//           onChange={(e)=>setGender(e.target.value)} /> other
+//     </label>
+//     <h1>gender: {gender}</h1>
+//   </div>
+// )
+// }
+// export default components;
+//Q8. Checkbox
 function components(){
-const[gender, setGender]=useState("")
+const[check, setCheck]=useState(false)
 
 return(
   <div>
     
   <label>
         <input 
-          type="radio" 
-          checked={gender==="male"}
-              value="male"
-          onChange={(e)=>setGender(e.target.value)} /> male
+          type="checkbox" 
+          checked={check}
+          onChange={(e)=>setCheck(e.target.checked)} /> I accept terms
     </label>
-  <label>
-        <input 
-          type="radio" 
-          value="female"
-         checked={gender==="female"}
-          onChange={(e)=>setGender(e.target.value)} /> female
-    </label>
-  <label>
-        <input 
-          type="radio" 
-          value="other"
-          checked={gender==="other"}
-          onChange={(e)=>setGender(e.target.value)} /> other
-    </label>
-    <h1>gender: {gender}</h1>
+  
+     {
+        check
+          ? <h1>Terms Accepted</h1>
+          : <h1>Please accept terms</h1>
+      }
   </div>
 )
 }
