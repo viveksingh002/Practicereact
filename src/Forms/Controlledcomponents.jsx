@@ -79,17 +79,35 @@ import { useState } from "react";
 
 //Q4. Clear Input Button
 
- function components(){
-const[name, setName] = useState("")
-return(
-  <div>
-    <input
-    value={name}
-     onChange={(e)=>setName(e.target.value)}/>
-     <button onClick={()=>setName("")}>Clear</button>
-    <h1>Hello {name}</h1>
-  </div>
-)
+//  function components(){
+// const[name, setName] = useState("")
+// return(
+//   <div>
+//     <input
+//     value={name}
+//      onChange={(e)=>setName(e.target.value)}/>
+//      <button onClick={()=>setName("")}>Clear</button>
+//     <h1>Hello {name}</h1>
+//   </div>
+// )
    
- }
- export default components;
+//  }
+//  export default components;
+
+//Q5. Live Character Counter
+
+//  function components(){
+// const[name, setName] = useState("")
+// return(
+//   <div>
+//     <input
+//     value={name}
+//      onChange={(e)=>setName(e.target.value)}/>
+     
+//     <h1>Hello {name}</h1>
+//     <h1>Characters: {name.length}</h1>
+//   </div>
+// )
+   
+//  }
+//  export default components;
