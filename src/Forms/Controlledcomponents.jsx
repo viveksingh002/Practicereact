@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { use, useState } from "react";
 
 // function Components() {
 //   const [name, setName] = useState("");
@@ -202,26 +202,69 @@ import { useState } from "react";
 // )
 // }
 // export default components;
-//Q8. Checkbox
-function components(){
-const[check, setCheck]=useState(false)
+
+
+// //Q8. Checkbox
+// function components(){
+// const[check, setCheck]=useState(false)
+
+// return(
+//   <div>
+    
+//   <label>
+//         <input 
+//           type="checkbox" 
+//           checked={check}
+//           onChange={(e)=>setCheck(e.target.checked)} /> I accept terms
+//     </label>
+  
+//      {
+//         check
+//           ? <h1>Terms Accepted</h1>
+//           : <h1>Please accept terms</h1>
+//       }
+//   </div>
+// )
+// }
+// export default components;
+
+//Q10. Mini Profile Form
+function Components(){
+const[profile,setProfile]=useState({
+    name:"",
+    course:"",
+    email:""
+})
+const[show,setShow]=useState(false)
 
 return(
-  <div>
-    
-  <label>
+    <div>
+    <label>
         <input 
-          type="checkbox" 
-          checked={check}
-          onChange={(e)=>setCheck(e.target.checked)} /> I accept terms
-    </label>
-  
-     {
-        check
-          ? <h1>Terms Accepted</h1>
-          : <h1>Please accept terms</h1>
-      }
-  </div>
+        value={profile.name}
+        onChange={(e)=>setProfile({ ...profile,name:e.target.value})}/>Name
+        </label>
+    <label>
+
+        <input 
+        value={profile.email}
+        onChange={(e)=>setProfile( { ...profile,email:e.target.value})}/>Email
+        </label>
+    <label>
+        <input 
+        value={profile.course}
+        onChange={(e)=>setProfile({ ...profile,course:e.target.value})}/>Course
+        </label>
+        <button onClick={()=>setShow(true)}>Sumbit</button>
+         {show && (
+        <div>
+          <h1>Profile</h1>
+          <p>Name: {profile.name}</p>
+          <p>Email: {profile.email}</p>
+          <p>Course: {profile.course}</p>
+        </div>
+      )}
+    </div>
 )
 }
-export default components;
+export default Components;
