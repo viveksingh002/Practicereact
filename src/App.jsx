@@ -14,6 +14,7 @@ import Ternaryoperator from './Ternaryoperator'
 import Array from './components/RenderingLists/Array'
 import Key from './components/RenderingLists/Key'
 import Components from './Forms/Controlledcomponents'
+import Formhandling from './Forms/Formhandling'
 
 
 function App() {
@@ -63,6 +64,7 @@ title="5412"
 <Array/>
 <Key/>
 <Components/>
+<Formhandling/>
 
     </div>
   )
