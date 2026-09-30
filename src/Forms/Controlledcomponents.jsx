@@ -228,43 +228,43 @@ import { use, useState } from "react";
 // }
 // export default components;
 
-//Q10. Mini Profile Form
-function Components(){
-const[profile,setProfile]=useState({
-    name:"",
-    course:"",
-    email:""
-})
-const[show,setShow]=useState(false)
+// //Q10. Mini Profile Form
+// function Components(){
+// const[profile,setProfile]=useState({
+//     name:"",
+//     course:"",
+//     email:""
+// })
+// const[show,setShow]=useState(false)
 
-return(
-    <div>
-    <label>
-        <input 
-        value={profile.name}
-        onChange={(e)=>setProfile({ ...profile,name:e.target.value})}/>Name
-        </label>
-    <label>
+// return(
+//     <div>
+//     <label>
+//         <input 
+//         value={profile.name}
+//         onChange={(e)=>setProfile({ ...profile,name:e.target.value})}/>Name
+//         </label>
+//     <label>
 
-        <input 
-        value={profile.email}
-        onChange={(e)=>setProfile( { ...profile,email:e.target.value})}/>Email
-        </label>
-    <label>
-        <input 
-        value={profile.course}
-        onChange={(e)=>setProfile({ ...profile,course:e.target.value})}/>Course
-        </label>
-        <button onClick={()=>setShow(true)}>Sumbit</button>
-         {show && (
-        <div>
-          <h1>Profile</h1>
-          <p>Name: {profile.name}</p>
-          <p>Email: {profile.email}</p>
-          <p>Course: {profile.course}</p>
-        </div>
-      )}
-    </div>
-)
-}
-export default Components;
+//         <input 
+//         value={profile.email}
+//         onChange={(e)=>setProfile( { ...profile,email:e.target.value})}/>Email
+//         </label>
+//     <label>
+//         <input 
+//         value={profile.course}
+//         onChange={(e)=>setProfile({ ...profile,course:e.target.value})}/>Course
+//         </label>
+//         <button onClick={()=>setShow(true)}>Sumbit</button>
+//          {show && (
+//         <div>
+//           <h1>Profile</h1>
+//           <p>Name: {profile.name}</p>
+//           <p>Email: {profile.email}</p>
+//           <p>Course: {profile.course}</p>
+//         </div>
+//       )}
+//     </div>
+// )
+// }
+// export default Components;

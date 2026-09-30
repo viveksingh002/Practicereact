@@ -13,7 +13,7 @@ import Conditionalrendering from './Conditionalrendering'
 import Ternaryoperator from './Ternaryoperator'
 import Array from './components/RenderingLists/Array'
 import Key from './components/RenderingLists/Key'
-import Components from './Forms/Controlledcomponents'
+// import Components from './Forms/Controlledcomponents'
 import Formhandling from './Forms/Formhandling'
 
 
@@ -63,7 +63,7 @@ title="5412"
 <Ternaryoperator/>
 <Array/>
 <Key/>
-<Components/>
+{/* <Components/> */}
 <Formhandling/>
 
     </div>
