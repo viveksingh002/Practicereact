@@ -1,5 +1,6 @@
 //Q1. Login Form
 
+
 // import { useState} from "react";
 
 // function Formhandling(){
@@ -269,34 +270,64 @@
 
 //Q7. Add Product Form
 
+// import { useState } from "react";
+// function Formhandling(){
+// const[product,setProduct]=useState({
+//     name:"",
+//     price:"",
+//     category:""
+// })
+// function handelsubmit(e){
+//     e.preventDefault();
+//     console.log(product);
+// } 
+// return(
+//     <div>
+//         <form onSubmit={handelsubmit}>
+//             <input
+//             value={product.name}
+//             type="text"
+//             onChange={(e)=>setProduct({...product,name:e.target.value})}/>
+//             <input
+//             value={product.price}
+//             type="number"
+//             onChange={(e)=>setProduct({...product,price:e.target.value})}/>
+//             <input
+//             value={product.category}
+//             type="number"
+//             onChange={(e)=>setProduct({...product,category:e.target.value})}/>
+//             <button>Submit</button>
+//         </form>
+//     </div>
+// )
+// }
+// export default Formhandling;
+
+
+//Q8. Todo Add Form
 import { useState } from "react";
 function Formhandling(){
-const[product,setProduct]=useState({
-    name:"",
-    price:"",
-    category:""
-})
+const[todos,setTodos]=useState([]);
+const[task,setTask]=useState("")
 function handelsubmit(e){
     e.preventDefault();
-    console.log(product);
-} 
+    setTodos([...todos,task]);
+setTask("");
+    console.log({task});
+
+}
 return(
     <div>
         <form onSubmit={handelsubmit}>
-            <input
-            value={product.name}
-            type="text"
-            onChange={(e)=>setProduct({...product,name:e.target.value})}/>
-            <input
-            value={product.price}
-            type="number"
-            onChange={(e)=>setProduct({...product,price:e.target.value})}/>
-            <input
-            value={product.category}
-            type="number"
-            onChange={(e)=>setProduct({...product,category:e.target.value})}/>
-            <button>Submit</button>
+            <input 
+            onChange={(e)=>setTask(e.target.value)}/>
+            <button >Add Task</button>
         </form>
+{
+    todos.map((todo,index)=>(
+        <h1 key={index}>{todo}</h1>
+    ))
+}
     </div>
 )
 }
