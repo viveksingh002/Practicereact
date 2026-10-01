@@ -219,50 +219,85 @@
 //Q6. Profile Update Form
 
 
-import { useState} from "react";
+// import { useState} from "react";
 
 
 
+// function Formhandling(){
+// const[form,setForm]=useState({
+//   name: "",
+//   course: "",
+//   college: ""
+// })
+// const[show,setShow]=useState(false)
+// function handelsubmit(e){
+// e.preventDefault();
+// console.log(form);
+// }
+
+// return(
+//     <div>
+//         <form onSubmit={handelsubmit}>
+//             <input 
+//                 value={form.name}
+//                 onChange={(e)=>setForm({...form,name:e.target.value})}
+//             />
+//             <input 
+//                 value={form.course}
+//                 onChange={(e)=>setForm({...form,course:e.target.value})}
+//             />
+//             <input 
+//                 value={form.college}
+//                 onChange={(e)=>setForm({...form,college:e.target.value})}
+//             />
+//             <button onClick={()=>setShow(true)} >Submit</button>
+//             <button onClick={()=>setShow(false)} >Reset</button>
+//         </form>
+// {
+//     show&&<div>
+// <h1>Profile</h1>
+// <h2>Name: {form.name}</h2>
+// <h2>Course: {form.course}</h2>
+// <h2>College: {form.college}</h2>
+//     </div>
+// }
+//     </div>
+// )
+// }
+
+// export default Formhandling;
+
+//Q7. Add Product Form
+
+import { useState } from "react";
 function Formhandling(){
-const[form,setForm]=useState({
-  name: "",
-  course: "",
-  college: ""
+const[product,setProduct]=useState({
+    name:"",
+    price:"",
+    category:""
 })
-const[show,setShow]=useState(false)
 function handelsubmit(e){
-e.preventDefault();
-console.log(form);
-}
-
+    e.preventDefault();
+    console.log(product);
+} 
 return(
     <div>
         <form onSubmit={handelsubmit}>
-            <input 
-                value={form.name}
-                onChange={(e)=>setForm({...form,name:e.target.value})}
-            />
-            <input 
-                value={form.course}
-                onChange={(e)=>setForm({...form,course:e.target.value})}
-            />
-            <input 
-                value={form.college}
-                onChange={(e)=>setForm({...form,college:e.target.value})}
-            />
-            <button onClick={()=>setShow(true)} >Submit</button>
-            <button onClick={()=>setShow(false)} >Reset</button>
+            <input
+            value={product.name}
+            type="text"
+            onChange={(e)=>setProduct({...product,name:e.target.value})}/>
+            <input
+            value={product.price}
+            type="number"
+            onChange={(e)=>setProduct({...product,price:e.target.value})}/>
+            <input
+            value={product.category}
+            type="number"
+            onChange={(e)=>setProduct({...product,category:e.target.value})}/>
+            <button>Submit</button>
         </form>
-{
-    show&&<div>
-<h1>Profile</h1>
-<h2>Name: {form.name}</h2>
-<h2>Course: {form.course}</h2>
-<h2>College: {form.college}</h2>
-    </div>
-}
     </div>
 )
 }
-
 export default Formhandling;
