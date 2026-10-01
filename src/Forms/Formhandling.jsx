@@ -304,30 +304,67 @@
 // export default Formhandling;
 
 
-//Q8. Todo Add Form
+// //Q8. Todo Add Form
+// import { useState } from "react";
+// function Formhandling(){
+// const[todos,setTodos]=useState([]);
+// const[task,setTask]=useState("")
+// function handelsubmit(e){
+//     e.preventDefault();
+//     setTodos([...todos,task]);
+// setTask("");
+//     console.log({task});
+
+// }
+// return(
+//     <div>
+//         <form onSubmit={handelsubmit}>
+//             <input 
+//             onChange={(e)=>setTask(e.target.value)}/>
+//             <button >Add Task</button>
+//         </form>
+// {
+//     todos.map((todo,index)=>(
+//         <h1 key={index}>{todo}</h1>
+//     ))
+// }
+//     </div>
+// )
+// }
+// export default Formhandling;
+
+//form with array
 import { useState } from "react";
 function Formhandling(){
-const[todos,setTodos]=useState([]);
-const[task,setTask]=useState("")
+const[form,setForm]=useState({
+    name:"",
+    class:""
+})
+const[list,setList]=useState([])
 function handelsubmit(e){
     e.preventDefault();
-    setTodos([...todos,task]);
-setTask("");
-    console.log({task});
-
+    setList([...list,form]);
+    console.log({form})
 }
 return(
     <div>
         <form onSubmit={handelsubmit}>
             <input 
-            onChange={(e)=>setTask(e.target.value)}/>
-            <button >Add Task</button>
+            value={form.name}
+            onChange={(e)=>setForm({...form,name:e.target.value})}/>
+            <input 
+            value={form.class}
+            onChange={(e)=>setForm({...form,class:e.target.value})}/>
+            <button>Submit</button>
         </form>
-{
-    todos.map((todo,index)=>(
-        <h1 key={index}>{todo}</h1>
-    ))
-}
+        {
+            list.map((lists,index)=>(
+                <div key={index}>
+                <h1>Name: {lists.name}</h1>
+                <h1>Class: {lists.class}</h1>
+                </div>
+            ))
+        }
     </div>
 )
 }
